@@ -1,0 +1,12 @@
+printDivisors: function void(n: integer)
+                {
+                    i: integer;
+                    for (i = 1, i <= n, i+1)
+                        if (n % i == 0)
+                            printf("%d ", i);
+                }
+
+                main: function void() {
+
+                printDivisors(100);
+                }

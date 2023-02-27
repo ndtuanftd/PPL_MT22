@@ -1,0 +1,4 @@
+main: function void() {
+                    a: array [20] of integer;
+                    a[10] = 1200*2;
+                }

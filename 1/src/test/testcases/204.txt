@@ -1,0 +1,10 @@
+main: function void() {
+                    
+                    i,j,k: integer;
+                    i = 1;
+                    while (i*5 < 100)
+                    {
+                        printf("
+");
+                    }
+                }

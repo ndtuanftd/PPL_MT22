@@ -1,0 +1,8 @@
+main: function void() {
+                    data: array [5] of integer;
+                    for (i = 0, i < 5, i+1)
+                        scanf("%d", data + i);
+                    for (i = 0, i < 5, i+1)
+                        printf("%d
+", (data + i));
+                }

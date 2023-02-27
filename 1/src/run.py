@@ -7,8 +7,11 @@ from antlr4 import *
 for path in ['./test/', './main/mt22/parser/']:
     sys.path.append(path)
 ANTLR_JAR = os.environ.get('ANTLR_JAR')
-TARGET_DIR = '../target'
+# TARGET_DIR = '../target'
+TARGET_DIR = '..\\target'
 GENERATE_DIR = 'main/mt22/parser'
+CLEAN_PATH = TARGET_DIR+'\\*'
+# print("ANTLR_JAR PATH: ", ANTLR_JAR)
 
 
 def main(argv):
@@ -18,7 +21,10 @@ def main(argv):
         subprocess.run(["java", "-jar", ANTLR_JAR, "-o", "../target",
                        "-no-listener", "-visitor", "main/mt22/parser/MT22.g4"])
     elif argv[0] == 'clean':
-        subprocess.run(["rm", "-rf", TARGET_DIR + "/*"])
+        # subprocess.run(["rm", "-rf", TARGET_DIR + "/*"])
+        subprocess.run(["del", CLEAN_PATH, '/Q'])
+        # subprocess.run(["del", "-rf", TARGET_DIR + "/*"])
+        # subprocess.run(["rm", TARGET_DIR+"/*"])
 
     elif argv[0] == 'test':
         if not os.path.isdir(TARGET_DIR + "/" + GENERATE_DIR):

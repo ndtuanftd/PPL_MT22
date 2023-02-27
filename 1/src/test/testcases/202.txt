@@ -1,0 +1,7 @@
+main: function void() {
+                    dividend, divisor, quotient, remainder: integer;
+                    quotient = dividend / divisor;
+                    remainder = dividend % divisor;
+                printf("Quotient = %d
+", quotient);
+                }

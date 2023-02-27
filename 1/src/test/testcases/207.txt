@@ -1,0 +1,12 @@
+main: function void() {
+                sum , mean, SD: float;
+                    i: integer;
+                    for (i = 0, i < 10, i+1) {
+                        sum = sum + data[i];
+                    }
+                    mean = sum / 10;
+                    for (i = 0, i < 10, i+1) {
+                        SD = SD + pow(data[i] - mean, 2);
+                    }
+                    return sqrt(SD / 10);
+                }

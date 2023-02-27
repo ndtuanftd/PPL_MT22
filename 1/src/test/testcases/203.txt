@@ -1,0 +1,40 @@
+main: function void() {
+                printf("
+
+		Studytonight - Best place to learn
+
+
+");
+                    printf("
+
+Nested loops are usually used to print a pattern in c. 
+
+");
+                    printf("
+
+They are also used to print out the matrix using a 2 dimensional array. 
+
+");
+
+                    i,j,k: integer;
+                    printf("
+
+Output of the nested loop is :
+
+");
+                    for(i = 0, i < 5, i+1)
+                    {
+                        printf("				");
+                        for(j = 0, j < 5, j+1)
+                        printf("* ");
+
+                        printf("
+");
+                    }
+                    printf("
+
+			Coding is Fun !
+
+
+");
+                }

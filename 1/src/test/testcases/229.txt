@@ -1,0 +1,4 @@
+main: function void() {
+                    a: integer  = 1*2+3;
+                    str: string = "Number" :: "String";
+                }

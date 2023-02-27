@@ -1,0 +1,18 @@
+floyd: function void(n: integer)
+                {
+                    // base condition
+                    if (n == 0)
+                        return;
+                    j: integer;
+                    for (j = 1, j <= row, j+1)
+                        printf("%d ", i+1);
+                    row = row+1;
+                    printf("
+");
+                    floyd(n - 1);
+                }
+                main: function void() {
+                foo(2 + x, 4.0 / y);
+                goo();
+                    floyd(6);
+                }

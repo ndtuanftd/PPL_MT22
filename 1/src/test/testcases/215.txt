@@ -1,0 +1,7 @@
+main: function void() {
+                r, s: integer;
+                a, b: array [10] of integer;
+                r = 4.0;
+                s = r * myPI;
+                a[0] = s;
+            }

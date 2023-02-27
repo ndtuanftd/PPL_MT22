@@ -1,0 +1,8 @@
+main: function void(){
+    x: array [3] of integer;
+    x = {
+    {1,2,3}, {3,4,5},{3,4,5}
+    };
+    x[0,0] = x [1,2] % x[2,2] ;
+}
+

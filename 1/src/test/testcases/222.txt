@@ -1,0 +1,9 @@
+foo: function integer(out a1: auto) {
+                    return 0;
+                }
+                main: function void() {
+                    while (a < 100*3) {
+                        writeInt(i);
+                    }
+                    foo(a);
+                }
