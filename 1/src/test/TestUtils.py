@@ -10,7 +10,7 @@ from MT22Lexer import MT22Lexer
 from MT22Parser import MT22Parser
 from lexererr import *
 import subprocess
-
+    
 JASMIN_JAR = "./external/jasmin.jar"
 TEST_DIR = "./test/testcases/"
 SOL_DIR = "./test/solutions/"

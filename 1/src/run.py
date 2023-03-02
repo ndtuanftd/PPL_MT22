@@ -22,6 +22,8 @@ def main(argv):
                        "-no-listener", "-visitor", "main/mt22/parser/MT22.g4"])
     elif argv[0] == 'clean':
         # subprocess.run(["rm", "-rf", TARGET_DIR + "/*"])
+        print("Clean Path: " + CLEAN_PATH)
+        print("Clean Path: " + TARGET_DIR)
         subprocess.run(["del", CLEAN_PATH, '/Q'])
         # subprocess.run(["del", "-rf", TARGET_DIR + "/*"])
         # subprocess.run(["rm", TARGET_DIR+"/*"])

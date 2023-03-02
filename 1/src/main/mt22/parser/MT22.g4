@@ -19,7 +19,7 @@ program: (decl)+  EOF ; // Start variable
 
 
 /* declaration */
-decl: vardecl | fundecl ;
+decl: vardecl | fundecl  ;
 // x: integer;
 // x, y: integer;
 // x, y, z: integer = 1,2,3;
@@ -69,11 +69,21 @@ stm: agnStm | ifStm | forStm | block_stm | whileStm | doWhileStm | breakStm
 agnStm: (ID|indexOp) ASSIGN expr SM
     ;
 // 7.2 if statement
-ifStm: IF LB expr RB stm false_stm?
-    ;
-false_stm: ELSE stm
+//ifStm: IF LB expr RB stm false_stm?
+//    ;
+//false_stm: ELSE stm
+//    ;
+
+ifStm: matchStm
+    | unMatchStm
     ;
 
+matchStm: IF LB expr RB matchStm (ELSE matchStm)?
+    ;
+
+unMatchStm: IF LB expr RB stm
+    | IF LB expr RB matchStm (ELSE unMatchStm)?
+    ;
 funCall: ID LB exprList? RB
     ;
 
