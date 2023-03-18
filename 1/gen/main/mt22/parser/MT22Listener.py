@@ -62,24 +62,6 @@ class MT22Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MT22Parser#fun_prototype.
-    def enterFun_prototype(self, ctx:MT22Parser.Fun_prototypeContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#fun_prototype.
-    def exitFun_prototype(self, ctx:MT22Parser.Fun_prototypeContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#fun_inherit_subpart.
-    def enterFun_inherit_subpart(self, ctx:MT22Parser.Fun_inherit_subpartContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#fun_inherit_subpart.
-    def exitFun_inherit_subpart(self, ctx:MT22Parser.Fun_inherit_subpartContext):
-        pass
-
-
     # Enter a parse tree produced by MT22Parser#paramdecl.
     def enterParamdecl(self, ctx:MT22Parser.ParamdeclContext):
         pass
@@ -116,6 +98,15 @@ class MT22Listener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MT22Parser#fun_inherit_subpart.
+    def enterFun_inherit_subpart(self, ctx:MT22Parser.Fun_inherit_subpartContext):
+        pass
+
+    # Exit a parse tree produced by MT22Parser#fun_inherit_subpart.
+    def exitFun_inherit_subpart(self, ctx:MT22Parser.Fun_inherit_subpartContext):
+        pass
+
+
     # Enter a parse tree produced by MT22Parser#stm.
     def enterStm(self, ctx:MT22Parser.StmContext):
         pass
@@ -143,21 +134,12 @@ class MT22Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MT22Parser#matchStm.
-    def enterMatchStm(self, ctx:MT22Parser.MatchStmContext):
+    # Enter a parse tree produced by MT22Parser#false_stm.
+    def enterFalse_stm(self, ctx:MT22Parser.False_stmContext):
         pass
 
-    # Exit a parse tree produced by MT22Parser#matchStm.
-    def exitMatchStm(self, ctx:MT22Parser.MatchStmContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#unMatchStm.
-    def enterUnMatchStm(self, ctx:MT22Parser.UnMatchStmContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#unMatchStm.
-    def exitUnMatchStm(self, ctx:MT22Parser.UnMatchStmContext):
+    # Exit a parse tree produced by MT22Parser#false_stm.
+    def exitFalse_stm(self, ctx:MT22Parser.False_stmContext):
         pass
 
 
@@ -212,6 +194,15 @@ class MT22Listener(ParseTreeListener):
 
     # Exit a parse tree produced by MT22Parser#block_stm.
     def exitBlock_stm(self, ctx:MT22Parser.Block_stmContext):
+        pass
+
+
+    # Enter a parse tree produced by MT22Parser#block_body.
+    def enterBlock_body(self, ctx:MT22Parser.Block_bodyContext):
+        pass
+
+    # Exit a parse tree produced by MT22Parser#block_body.
+    def exitBlock_body(self, ctx:MT22Parser.Block_bodyContext):
         pass
 
 
@@ -284,15 +275,6 @@ class MT22Listener(ParseTreeListener):
 
     # Exit a parse tree produced by MT22Parser#expr.
     def exitExpr(self, ctx:MT22Parser.ExprContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#expr0.
-    def enterExpr0(self, ctx:MT22Parser.Expr0Context):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#expr0.
-    def exitExpr0(self, ctx:MT22Parser.Expr0Context):
         pass
 
 
@@ -386,51 +368,6 @@ class MT22Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MT22Parser#arrEles.
-    def enterArrEles(self, ctx:MT22Parser.ArrElesContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#arrEles.
-    def exitArrEles(self, ctx:MT22Parser.ArrElesContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#int_list.
-    def enterInt_list(self, ctx:MT22Parser.Int_listContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#int_list.
-    def exitInt_list(self, ctx:MT22Parser.Int_listContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#float_list.
-    def enterFloat_list(self, ctx:MT22Parser.Float_listContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#float_list.
-    def exitFloat_list(self, ctx:MT22Parser.Float_listContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#bool_list.
-    def enterBool_list(self, ctx:MT22Parser.Bool_listContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#bool_list.
-    def exitBool_list(self, ctx:MT22Parser.Bool_listContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#string_list.
-    def enterString_list(self, ctx:MT22Parser.String_listContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#string_list.
-    def exitString_list(self, ctx:MT22Parser.String_listContext):
-        pass
-
-
     # Enter a parse tree produced by MT22Parser#atomicType.
     def enterAtomicType(self, ctx:MT22Parser.AtomicTypeContext):
         pass
@@ -467,42 +404,6 @@ class MT22Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MT22Parser#intOp.
-    def enterIntOp(self, ctx:MT22Parser.IntOpContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#intOp.
-    def exitIntOp(self, ctx:MT22Parser.IntOpContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#floatOp.
-    def enterFloatOp(self, ctx:MT22Parser.FloatOpContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#floatOp.
-    def exitFloatOp(self, ctx:MT22Parser.FloatOpContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#boolOp.
-    def enterBoolOp(self, ctx:MT22Parser.BoolOpContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#boolOp.
-    def exitBoolOp(self, ctx:MT22Parser.BoolOpContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#stringConcat.
-    def enterStringConcat(self, ctx:MT22Parser.StringConcatContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#stringConcat.
-    def exitStringConcat(self, ctx:MT22Parser.StringConcatContext):
-        pass
-
-
     # Enter a parse tree produced by MT22Parser#indexOp.
     def enterIndexOp(self, ctx:MT22Parser.IndexOpContext):
         pass
@@ -518,24 +419,6 @@ class MT22Listener(ParseTreeListener):
 
     # Exit a parse tree produced by MT22Parser#indexList.
     def exitIndexList(self, ctx:MT22Parser.IndexListContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#rUnaryOp.
-    def enterRUnaryOp(self, ctx:MT22Parser.RUnaryOpContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#rUnaryOp.
-    def exitRUnaryOp(self, ctx:MT22Parser.RUnaryOpContext):
-        pass
-
-
-    # Enter a parse tree produced by MT22Parser#binOp.
-    def enterBinOp(self, ctx:MT22Parser.BinOpContext):
-        pass
-
-    # Exit a parse tree produced by MT22Parser#binOp.
-    def exitBinOp(self, ctx:MT22Parser.BinOpContext):
         pass
 
 

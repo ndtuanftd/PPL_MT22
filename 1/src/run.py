@@ -8,9 +8,9 @@ for path in ['./test/', './main/mt22/parser/']:
     sys.path.append(path)
 ANTLR_JAR = os.environ.get('ANTLR_JAR')
 # TARGET_DIR = '../target'
-TARGET_DIR = '..\\target'
+TARGET_DIR = '../target'
 GENERATE_DIR = 'main/mt22/parser'
-CLEAN_PATH = TARGET_DIR+'\\*'
+CLEAN_PATH = TARGET_DIR+'/MT22Lexer.py'
 # print("ANTLR_JAR PATH: ", ANTLR_JAR)
 
 
@@ -24,9 +24,9 @@ def main(argv):
         # subprocess.run(["rm", "-rf", TARGET_DIR + "/*"])
         print("Clean Path: " + CLEAN_PATH)
         print("Clean Path: " + TARGET_DIR)
-        subprocess.run(["del", CLEAN_PATH, '/Q'])
+        # subprocess.run(["del", CLEAN_PATH, '/Q'])
         # subprocess.run(["del", "-rf", TARGET_DIR + "/*"])
-        # subprocess.run(["rm", TARGET_DIR+"/*"])
+        subprocess.run(["rm", CLEAN_PATH])
 
     elif argv[0] == 'test':
         if not os.path.isdir(TARGET_DIR + "/" + GENERATE_DIR):

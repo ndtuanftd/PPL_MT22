@@ -65,8 +65,8 @@ class LexerSuite(unittest.TestCase):
 
     def test_simple_program9(self):
         """Simple program: int main() {} """
-        input = """ "Hi, this is illegall escape \i" """
-        expect = """Hi, this is illegall escape \i,<EOF>"""
+        input = """ "Hi, this is illegall escape \t" """
+        expect = "Hi, this is illegall escape \t,<EOF>"
         self.assertTrue(TestLexer.test(input, expect, 109))
 
     def test_simple_program10(self):
@@ -349,7 +349,7 @@ class LexerSuite(unittest.TestCase):
 
     def test_integer_real1(self):
         self.assertTrue(TestLexer.test("1.2 1. .1 1e2 1.2E-2 1.2e-2 .1E2 9.0 12e8 0.33E-3 128e-42",
-                                       "1.2,1.,.,1,1e2,1.2E-2,1.2e-2,.,1E2,9.0,12e8,0.33E-3,128e-42,<EOF>", 158))
+                                       "1.2,1.,.,1,1e2,1.2E-2,1.2e-2,.1E2,9.0,12e8,0.33E-3,128e-42,<EOF>", 158))
 
     def test_integer_real2(self):
         self.assertTrue(TestLexer.test("9.0 12e8 0.33E-3 128e-42", "9.0,12e8,0.33E-3,128e-42,<EOF>", 159))
@@ -359,7 +359,7 @@ class LexerSuite(unittest.TestCase):
             TestLexer.test("11.0 12.e8 0.11+E-3 145Ee-42", "11.0,12.e8,0.11,+,E,-,3,145,Ee,-,42,<EOF>", 160))
 
     def test_integer_real4(self):
-        self.assertTrue(TestLexer.test(".11E2 1.11 .33 1.e12 1E-15", ".,11E2,1.11,.,33,1.e12,1E-15,<EOF>", 161))
+        self.assertTrue(TestLexer.test(".11E2 1.11 .33 1.e12 1E-15", ".11E2,1.11,.,33,1.e12,1E-15,<EOF>", 161))
 
     def test_integer_real5(self):
         self.assertTrue(TestLexer.test("e--12 e12 E-15 99e 1 1. 1", "e,-,-,12,e12,E,-,15,99,e,1,1.,1,<EOF>", 162))
