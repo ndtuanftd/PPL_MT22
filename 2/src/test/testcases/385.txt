@@ -1,0 +1,4 @@
+main: function void() {
+               printValue(4);
+           }
+    

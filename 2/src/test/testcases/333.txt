@@ -1,0 +1,9 @@
+main: function void() {
+                        a: array [20] of integer;
+                        a[10] = 1200*2;
+                        // if out else
+                        if (a[10] < 100) {
+                            a[10] = a[10]*100;
+                            a[1] = a[10];
+                        }
+                    }

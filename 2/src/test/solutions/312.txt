@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(primenumber, VoidType, [Param(number, IntegerType)], None, BlockStmt([VarDecl(i, IntegerType), ForStmt(AssignStmt(Id(i), IntegerLit(2)), BinExpr(<=, Id(i), BinExpr(/, Id(number), IntegerLit(2))), BinExpr(+, Id(i), IntegerLit(1)), BlockStmt([IfStmt(BinExpr(!=, BinExpr(%, Id(number), Id(i)), IntegerLit(0)), ContinueStmt(), ReturnStmt(IntegerLit(1)))])), ReturnStmt(IntegerLit(0))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(primenumber, IntegerLit(100))]))
+])

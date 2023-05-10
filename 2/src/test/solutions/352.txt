@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(fib, IntegerType, [Param(n, IntegerType)], None, BlockStmt([VarDecl(f, ArrayType([100], IntegerType)), VarDecl(i, IntegerType), AssignStmt(ArrayCell(f, [IntegerLit(0)]), IntegerLit(0)), AssignStmt(ArrayCell(f, [IntegerLit(1)]), IntegerLit(1)), ForStmt(AssignStmt(Id(i), IntegerLit(2)), BinExpr(<=, Id(i), Id(n)), BinExpr(+, Id(i), IntegerLit(1)), BlockStmt([AssignStmt(ArrayCell(f, [Id(i)]), BinExpr(+, ArrayCell(f, [BinExpr(-, Id(i), IntegerLit(1))]), ArrayCell(f, [BinExpr(-, Id(i), IntegerLit(2))])))])), ReturnStmt(ArrayCell(f, [Id(n)]))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(print, FuncCall(fib, [IntegerLit(10)]))]))
+])

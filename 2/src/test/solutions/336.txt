@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(a, ArrayType([20], IntegerType)), AssignStmt(ArrayCell(a, [IntegerLit(10)]), BinExpr(*, IntegerLit(1200), IntegerLit(2))), VarDecl(i, IntegerType), IfStmt(BinExpr(<, ArrayCell(a, [IntegerLit(10)]), IntegerLit(100)), BlockStmt([AssignStmt(ArrayCell(a, [IntegerLit(10)]), BinExpr(*, ArrayCell(a, [IntegerLit(10)]), IntegerLit(100))), AssignStmt(ArrayCell(a, [IntegerLit(1)]), ArrayCell(a, [IntegerLit(10)])), WhileStmt(BinExpr(<, Id(a), IntegerLit(20)), BlockStmt([CallStmt(printf, StringLit(value of a: %d\n), Id(a)), AssignStmt(Id(a), BinExpr(+, Id(a), IntegerLit(1))), IfStmt(BinExpr(>, Id(a), IntegerLit(15)), BlockStmt([BreakStmt()]))]))]), AssignStmt(ArrayCell(a, [IntegerLit(10)]), IntegerLit(0)))]))
+])

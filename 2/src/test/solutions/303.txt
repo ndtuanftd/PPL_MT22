@@ -1,3 +1,5 @@
 Program([
+	VarDecl(x, AutoType, ArrayLit([IntegerLit(4), IntegerLit(5), IntegerLit(6)]))
+	VarDecl(y, AutoType, ArrayCell(x, [IntegerLit(1), IntegerLit(2)]))
 	FuncDecl(main, VoidType, [], None, BlockStmt([]))
 ])

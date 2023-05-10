@@ -31,7 +31,11 @@ class ASTGenSuite(unittest.TestCase):
 
     def test_simple_program(self):
         """Simple program"""
-        input = """main: function void () {
+        input = """
+        x : auto={4,5,6};
+        y:  auto=x[1,2];
+        
+        main: function void () {
 
         }"""
         expect = """Program([
@@ -81,7 +85,7 @@ class ASTGenSuite(unittest.TestCase):
 
     def test_simple_program7(self):
         input = """main: function void() {
-                    a = data[i,1];
+                    a = data[-1,1];
                     a = a+b*c+d/2-10%2;
                     sum , mean, SD: float;
                         i: integer;

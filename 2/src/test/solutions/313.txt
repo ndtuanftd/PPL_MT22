@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(primenumber, VoidType, [Param(number, IntegerType)], None, BlockStmt([VarDecl(i, IntegerType), VarDecl(a, BooleanType, BooleanLit(False)), ReturnStmt(Id(a))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(primenumber, IntegerLit(100))]))
+])

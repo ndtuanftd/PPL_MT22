@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(checkYear, BooleanType, [Param(year, IntegerType)], None, BlockStmt([ReturnStmt(BinExpr(||, BinExpr(&&, BinExpr(==, BinExpr(%, Id(year), IntegerLit(4)), IntegerLit(0)), BinExpr(!=, BinExpr(%, Id(year), IntegerLit(100)), IntegerLit(0))), BinExpr(==, BinExpr(%, Id(year), IntegerLit(400)), IntegerLit(0))))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(print, FuncCall(checkYear, [IntegerLit(2023)]))]))
+])

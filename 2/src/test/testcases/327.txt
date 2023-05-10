@@ -1,0 +1,12 @@
+foo_parent: function integer() {
+                        return 1;
+                    }
+                    foo: function integer(out a1: auto, a2: array [10] of integer) inherit foo_parent {
+                        return 0;
+                    }
+                    main: function void() {
+                        while (a < 100*3) {
+                            writeInt(i);
+                        }
+                        foo(a);
+                    }

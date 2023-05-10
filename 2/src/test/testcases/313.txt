@@ -1,0 +1,11 @@
+primenumber: function void(number: integer)
+                    {
+                        i: integer;
+
+                        a : boolean = false;
+                        return a;
+                    }
+
+                    main: function void() {
+                        primenumber(100);
+                    }

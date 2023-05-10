@@ -11,6 +11,8 @@ if os.path.isdir('../target/main/mt22/parser') and not '../target/main/mt22/pars
 from MT22Lexer import MT22Lexer
 from MT22Parser import MT22Parser
 from ASTGeneration import ASTGeneration
+from StaticChecker import StaticChecker
+from StaticError import StaticError
 from lexererr import *
 import subprocess
 
@@ -155,7 +157,8 @@ class TestChecker:
         checker = StaticChecker(asttree)
         try:
             res = checker.check()
-            dest.write(str(list(res)))
+            dest.write(str(res))
+            # dest.write(str(list(res)))
         except StaticError as e:
             dest.write(str(e))
         finally:

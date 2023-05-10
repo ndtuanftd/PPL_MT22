@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(printString, StringLit(Enter an integer: )), VarDecl(num, IntegerType, FuncCall(readInt, [])), CallStmt(printInt, Id(num))]))
+])

@@ -1,0 +1,15 @@
+floyd: function void(inherit out n: integer)
+                    {
+                        // base condition
+                        if (n == 0)
+                            return;
+                        j: integer;
+                        row = row+1;
+                        printf("\n");
+                        floyd(n - 1);
+                    }
+                    main: function void() {
+                        foo(2 + x, 4.0 / y);
+                        goo();
+                         floyd(6);
+                    }

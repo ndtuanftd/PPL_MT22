@@ -1,0 +1,5 @@
+Program([
+	FuncDecl(foo_parent, IntegerType, [], None, BlockStmt([ReturnStmt(IntegerLit(1))]))
+	FuncDecl(foo, IntegerType, [OutParam(a1, AutoType), Param(a2, ArrayType([10], IntegerType))], foo_parent, BlockStmt([ReturnStmt(IntegerLit(0))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([WhileStmt(BinExpr(<, Id(a), BinExpr(*, IntegerLit(100), IntegerLit(3))), BlockStmt([CallStmt(writeInt, Id(i))])), CallStmt(foo, Id(a))]))
+])

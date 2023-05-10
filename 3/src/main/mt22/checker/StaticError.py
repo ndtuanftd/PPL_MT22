@@ -28,7 +28,7 @@ class Identifier(Kind):
 
 class Redeclared(StaticError):
     def __init__(self, kind: Kind, identifier: str):
-        self.kind = kind
+        self.kind = kind # Variable, Parameter, Function
         self.identifier = identifier
 
     def __str__(self):
@@ -37,7 +37,7 @@ class Redeclared(StaticError):
 
 class Undeclared(StaticError):
     def __init__(self, kind: Kind, name: str):
-        self.kind = kind
+        self.kind = kind # kind: Identifier() / Function()
         self.name = name
 
     def __str__(self):
@@ -46,12 +46,18 @@ class Undeclared(StaticError):
 
 class Invalid(StaticError):
     def __init__(self, kind: Kind, name: str):
-        self.kind = kind
+        self.kind = kind # Variable, Parameter
         self.name = name
 
     def __str__(self):
         return f"Invalid {str(self.kind)}: {self.name}"
 
+class TypeMismatchInVarDecl(StaticError):
+        def __init__(self, decl):
+            self.decl = decl
+
+        def __str__(self):
+            return f"Type mismatch in Variable Declaration: {str(self.decl)}"
 
 class TypeMismatchInExpression(StaticError):
     def __init__(self, expr):

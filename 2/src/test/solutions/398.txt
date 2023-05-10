@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(x, ArrayType([3], StringType)), AssignStmt(Id(x), ArrayLit([StringLit(Kangxi), StringLit(Yongzheng), StringLit(Qianlong)])), ForStmt(AssignStmt(Id(i), IntegerLit(0)), BinExpr(<, Id(i), IntegerLit(3)), BinExpr(+, Id(i), IntegerLit(1)), CallStmt(printString, ArrayCell(x, [Id(i)])))]))
+])

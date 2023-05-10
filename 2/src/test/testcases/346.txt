@@ -1,0 +1,14 @@
+main: function void() {
+                    foo(2 + x, 4.0 / y);
+                    goo();
+                        while (i <= (n * (n + 1)) / 2) {
+                        printf("%d ", i);
+                        // condition for what element has to print and
+                            // how many times
+                            if (i == (j * (j + 1)) / 2) {
+                                printf("\n");
+                                j=j+1;
+                            }
+                            i=i+1;
+                        }
+                    }

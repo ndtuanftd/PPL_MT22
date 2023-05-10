@@ -1,0 +1,45 @@
+
+
+
+
+
+# Inherit statement
+
+To prevent default activation,
+	- if parent_func has parameters -> first statement in child_func is 
+								+ `super(arg_list)` to activate
+								+ `preventDefault()` to prevent default activate
+	- if parent_func has no param   -> first statement is preventDefault()
+
+-> Scope of parent_func is the scope of the function (or param of function)
+
+
+
+
+# Static checker
+
+## Redeclared 
+
+## Undeclared
+
+## Invalid declaration
+1. when variable is declared auto type without initialization
+
+
+## Type mismatch in Exp
+
+## Type mismatch in Stmt
+
+
+## Break/Continue not in Loop
+
+## Illigel array Literal
+Array literal must be in the same type
+
+
+## Invalid first statement
+For inherit 
+
+
+## No entry point
+Must have main

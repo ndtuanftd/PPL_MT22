@@ -1,0 +1,7 @@
+main: function void() {
+                        foo(123*321,"12323");
+                        while (true) {
+                        if (a < 1) break;
+                        else continue;
+                        }
+                    }

@@ -25,36 +25,26 @@ class ASTGeneration(MT22Visitor):
         else:
             return self.visit(ctx.fundecl())
     def visitVardecl(self, ctx: MT22Parser.VardeclContext):
-        # return Vardecl(Test)
-
         if ctx.vardecl_wo_asg():
             id_list, type = self.visit(ctx.vardecl_wo_asg())
             return list(map(lambda id: VarDecl(id, type, None), id_list))
         else:
-            id_list, init_list , type = self.visit(ctx.vardecl_w_asg())
-            # print("Type: ", type[0])
+            id_list, init_list, type = self.visit(ctx.vardecl_w_asg())
             return list(map(lambda lis: VarDecl(lis[0],  type[0], lis[1]), zip(id_list[::-1], init_list)))
 
     def visitVardecl_wo_asg(self, ctx: MT22Parser.Vardecl_wo_asgContext):
         type = self.visit(ctx.varType())
         idlist = self.visit(ctx.idList())
-        # return [VarDecl(id, typ, None) for id in idlist]
-        # res1 = list(map(lambda x: print(f"{x} map vardecl {VarDecl(x, typ, None)}"),  idlist))
-        # print('----------------------------------------')
-        # return [print("ddsaddasdad",VarDecl(id, typ, None)) for id in idlist]
-        # res = list(map(lambda item: VarDecl(item, typ, None), idlist))
         return idlist, type
     def visitVardecl_w_asg(self, ctx: MT22Parser.Vardecl_w_asgContext):
         if ctx.varType():  # ID COLON varType ASSIGN expr
             id = ctx.ID().getText()
             varType = self.visit(ctx.varType())
             expr = self.visit(ctx.expr())
-            # print(f"id: {id}, varType: {varType}, expr: {expr}")
             return ([id], [expr], [varType])
         else: # ID COMMA vardecl_w_asg COMMA expr
             id = ctx.ID().getText()
             expr_temp = self.visit(ctx.expr())
-            # print("expr_temp", expr_temp)
             vardecl, expr, varType = self.visit(ctx.vardecl_w_asg())
             return ([*vardecl, id], [*expr, expr_temp], [*varType, None])
 

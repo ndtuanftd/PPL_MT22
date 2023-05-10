@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(number, IntegerType), IfStmt(BinExpr(<, Id(number), IntegerLit(100)), CallStmt(printf, StringLit(Number is less than 100!\n)), IfStmt(BinExpr(==, Id(number), IntegerLit(100)), CallStmt(printf, StringLit(Number is 100!\n)), CallStmt(printf, StringLit(Number is greater than 100!\n))))]))
+])

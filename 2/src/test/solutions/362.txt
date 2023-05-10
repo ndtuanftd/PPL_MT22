@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(a, FloatType), VarDecl(b, FloatType), VarDecl(x, FloatType), CallStmt(printString, StringLit(Enter coefficients a and b: )), CallStmt(readFloat, Id(a)), CallStmt(readFloat, Id(b)), IfStmt(BinExpr(==, Id(a), IntegerLit(0)), BlockStmt([IfStmt(BinExpr(==, Id(b), IntegerLit(0)), BlockStmt([CallStmt(printString, StringLit(The equation has infinite solutions.\\ \n))]), BlockStmt([CallStmt(printString, StringLit(The equation has no solution.\\ \n))]))]), BlockStmt([AssignStmt(Id(x), BinExpr(/, UnExpr(-, Id(b)), Id(a))), CallStmt(writeFloat, Id(x))]))]))
+])

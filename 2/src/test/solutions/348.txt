@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(floyd, VoidType, [InheritOutParam(n, IntegerType)], None, BlockStmt([IfStmt(BinExpr(==, Id(n), IntegerLit(0)), ReturnStmt()), VarDecl(j, IntegerType), AssignStmt(Id(row), BinExpr(+, Id(row), IntegerLit(1))), CallStmt(printf, StringLit(\n)), CallStmt(floyd, BinExpr(-, Id(n), IntegerLit(1)))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(foo, BinExpr(+, IntegerLit(2), Id(x)), BinExpr(/, FloatLit(4.0), Id(y))), CallStmt(goo, ), CallStmt(floyd, IntegerLit(6))]))
+])

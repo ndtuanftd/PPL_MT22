@@ -1,0 +1,3 @@
+Program([
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(dividend, IntegerType), VarDecl(divisor, IntegerType), VarDecl(quotient, IntegerType), VarDecl(remainder, IntegerType), AssignStmt(Id(quotient), BinExpr(/, Id(dividend), Id(divisor))), AssignStmt(Id(remainder), BinExpr(%, Id(dividend), Id(divisor))), CallStmt(printf, StringLit(Quotient = %d\n), Id(quotient))]))
+])

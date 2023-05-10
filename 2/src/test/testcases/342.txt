@@ -1,0 +1,8 @@
+main: function void() {
+                    foo(2 + x, 4.0 / y);
+                    goo();
+                        if (a < 10)
+                            if (a>5)
+                                print(a);
+                        else print(a+1);
+                    }

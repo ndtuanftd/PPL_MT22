@@ -1,0 +1,6 @@
+Program([
+	VarDecl(xsadgf, FloatType, FloatLit(6.5))
+	FuncDecl(asdf, FloatType, [OutParam(t, FloatType), Param(x, FloatType)], None, BlockStmt([AssignStmt(Id(x), FuncCall(readFloat, [])), AssignStmt(Id(t), BinExpr(*, Id(x), Id(xsadgf))), ReturnStmt(Id(t))]))
+	FuncDecl(printflo, VoidType, [Param(sdt, FloatType)], None, BlockStmt([CallStmt(writeFloat, Id(std))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([VarDecl(ddd, FloatType, FloatLit(0.1)), VarDecl(ff, FloatType, FloatLit(2.2)), VarDecl(et, FloatType, FloatLit(3.2)), CallStmt(printflo, FuncCall(asdf, [BinExpr(+, BinExpr(-, Id(ddd), IntegerLit(1)), BinExpr(*, IntegerLit(2), IntegerLit(3))), BinExpr(*, Id(ff), Id(et))]))]))
+])

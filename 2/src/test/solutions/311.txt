@@ -1,0 +1,4 @@
+Program([
+	FuncDecl(printDivisors, VoidType, [Param(n, IntegerType)], None, BlockStmt([VarDecl(i, IntegerType), ForStmt(AssignStmt(Id(i), IntegerLit(1)), BinExpr(<=, Id(i), Id(n)), BinExpr(+, Id(i), IntegerLit(1)), IfStmt(BinExpr(==, BinExpr(%, Id(n), Id(i)), IntegerLit(0)), CallStmt(printf, StringLit(%d ), Id(i))))]))
+	FuncDecl(main, VoidType, [], None, BlockStmt([CallStmt(printDivisors, IntegerLit(100))]))
+])
